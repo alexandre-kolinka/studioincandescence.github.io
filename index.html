@@ -169,9 +169,132 @@ nav { position:fixed; top:0; left:0; right:0; z-index:100; display:flex; justify
 .collab-link:hover { color:var(--blue); border-color:var(--blue); }
 
 /* FOOTER */
-footer { padding:24px 60px; border-top:1px solid var(--border); display:flex; justify-content:space-between; align-items:center; font-family:'Space Mono',monospace; font-size:10px; letter-spacing:.12em; color:var(--gray); }
+footer { padding:24px 60px 100px; border-top:1px solid var(--border); display:flex; justify-content:space-between; align-items:center; font-family:'Space Mono',monospace; font-size:10px; letter-spacing:.12em; color:var(--gray); }
 .footer-ak { color:var(--gray); text-decoration:none; transition:color .3s; }
 .footer-ak:hover { color:var(--blue); }
+.product-banner {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  z-index: 90;
+  background: rgba(5,5,8,.97);
+  border-top: 1px solid var(--blue);
+  box-shadow: 0 -4px 40px rgba(0,102,255,.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 60px;
+  cursor: pointer;
+  transition: background .3s;
+}
+.product-banner:hover { background: rgba(0,102,255,.08); }
+.banner-left { display:flex; align-items:center; gap:20px; }
+.banner-dot { width:8px; height:8px; border-radius:50%; background:var(--blue); box-shadow:0 0 12px var(--blue); animation:pulse 2s ease infinite; flex-shrink:0; }
+.banner-name { font-size:14px; font-weight:400; color:var(--white); letter-spacing:.02em; }
+.banner-sub { font-size:11px; color:var(--gray); margin-top:2px; }
+.banner-right { display:flex; align-items:center; gap:24px; }
+.banner-price { font-family:'Space Mono',monospace; font-size:16px; color:var(--blue); text-shadow:0 0 12px var(--blue-glow); }
+.banner-cta { font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:var(--black); background:var(--blue); padding:10px 24px; font-family:'Space Grotesk',sans-serif; box-shadow:0 0 16px var(--blue-glow); white-space:nowrap; }
+.banner-hint { font-size:9px; letter-spacing:.15em; text-transform:uppercase; color:var(--gray); }
+
+@media(max-width:600px){
+  .product-banner{padding:12px 20px}
+  .banner-sub,.banner-hint{display:none}
+  .banner-price{font-size:14px}
+  .banner-cta{padding:8px 16px;font-size:9px}
+}
+
+/* ── PRODUCT OVERLAY ── */
+.product-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  background: var(--black);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .4s ease;
+}
+.product-overlay.open { opacity:1; pointer-events:all; }
+
+.product-overlay-bar {
+  position: sticky;
+  top: 0; z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 60px;
+  background: rgba(5,5,8,.97);
+  border-bottom: 1px solid var(--border);
+}
+.product-overlay-close {
+  font-size:10px; letter-spacing:.25em; text-transform:uppercase;
+  color:var(--gray); background:none; border:none; cursor:pointer;
+  display:flex; align-items:center; gap:10px;
+  font-family:'Space Grotesk',sans-serif; transition:color .3s;
+}
+.product-overlay-close:hover { color:var(--white); }
+.product-overlay-close::before { content:'←'; font-size:13px; }
+.product-overlay-logo { font-family:'Space Mono',monospace; font-size:12px; color:var(--gray); letter-spacing:.08em; }
+
+.product-body {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.product-images-grid { display:grid; grid-template-columns:1fr 1fr; gap:3px; }
+.product-img-main { grid-column:span 2; height:400px; overflow:hidden; border:1px solid var(--border); position:relative; }
+.product-img-main img { width:100%; height:100%; object-fit:cover; filter:brightness(.9); transition:transform .8s ease; }
+.product-img-main:hover img { transform:scale(1.03); }
+.product-img-sm { height:200px; overflow:hidden; border:1px solid var(--border); }
+.product-img-sm img { width:100%; height:100%; object-fit:cover; filter:brightness(.85); transition:transform .6s ease; }
+.product-img-sm:hover img { transform:scale(1.05); }
+
+.product-info { position:sticky; top:80px; }
+.product-tag { font-family:'Space Mono',monospace; font-size:9px; letter-spacing:.3em; text-transform:uppercase; color:var(--blue); margin-bottom:16px; }
+.product-name { font-size:clamp(36px,5vw,60px); font-weight:300; color:var(--white); line-height:1; margin-bottom:8px; }
+.product-name em { font-style:normal; color:var(--blue); text-shadow:0 0 30px var(--blue-glow); }
+.product-tagline { font-size:13px; letter-spacing:.08em; text-transform:uppercase; color:var(--gray); margin-bottom:32px; }
+.product-desc { font-size:15px; line-height:1.9; color:var(--gray-light); margin-bottom:16px; }
+.product-specs { border:1px solid var(--border); margin:32px 0; }
+.product-spec-row { display:flex; justify-content:space-between; padding:12px 20px; border-bottom:1px solid var(--border); font-size:12px; }
+.product-spec-row:last-child { border-bottom:none; }
+.product-spec-key { font-family:'Space Mono',monospace; font-size:10px; letter-spacing:.1em; color:var(--gray); text-transform:uppercase; }
+.product-spec-val { color:var(--white); text-align:right; }
+
+.product-buy-block { padding:28px; border:1px solid var(--blue); background:var(--blue-dim); position:relative; overflow:hidden; }
+.product-buy-block::before { content:''; position:absolute; top:0; right:0; width:150px; height:150px; background:radial-gradient(circle,rgba(0,102,255,.15) 0%,transparent 70%); pointer-events:none; }
+.product-price { font-family:'Space Mono',monospace; font-size:32px; color:var(--blue); text-shadow:0 0 20px var(--blue-glow); margin-bottom:8px; }
+.product-price-sub { font-size:12px; color:var(--gray); margin-bottom:24px; line-height:1.6; }
+.product-buy-btn {
+  display:block; width:100%; text-align:center;
+  font-family:'Space Grotesk',sans-serif; font-size:12px; letter-spacing:.2em; text-transform:uppercase;
+  color:var(--black); background:var(--blue); padding:18px 32px;
+  text-decoration:none; transition:all .3s;
+  box-shadow:0 0 24px var(--blue-glow);
+}
+.product-buy-btn:hover { box-shadow:0 0 48px var(--blue-glow); transform:translateY(-1px); }
+
+@media(max-width:900px){
+  .product-body{grid-template-columns:1fr;gap:48px;padding:40px 32px}
+  .product-overlay-bar{padding:16px 32px}
+  .product-info{position:static}
+}
+@media(max-width:600px){
+  .product-body{padding:28px 20px}
+  .product-overlay-bar{padding:14px 20px}
+  .product-img-main{height:260px}
+  .product-img-sm{height:140px}
+}
+
+/* FOOTER padding for banner */
+footer { padding-bottom: 80px; }
+@media(max-width:600px){ footer{padding-bottom:72px} }
 
 /* ANIMATIONS */
 @keyframes fu { from{opacity:0;transform:translateY(16px)} to{opacity:1;transform:translateY(0)} }
@@ -293,15 +416,15 @@ footer { padding:24px 60px; border-top:1px solid var(--border); display:flex; ju
 <!-- ══ R&D PAGE ══ -->
 <div class="page" id="page-rd">
   <div class="rd-tabs">
-    <button class="rd-tab active" data-p="croozin">crOOZin PCB</button>
+    <button class="rd-tab active" data-p="croozin-pcb">crOOZin PCB</button>
     <button class="rd-tab" data-p="phyllotaxis">Phyllotaxis Lamp</button>
     <button class="rd-tab" data-p="headset">Sensory Headset</button>
     <button class="rd-tab" data-p="fibre">LED + Fibre</button>
     <button class="rd-tab" data-p="swarm">Sea Swarm</button>
   </div>
 
-  <!-- crOOZin PCB -->
-  <div class="rd-panel active" id="rd-croozin">
+  <!-- crOOZin PCB — TECHNICAL -->
+  <div class="rd-panel active" id="rd-croozin-pcb">
     <div class="rd-header">
       <div class="rd-tag">Project 01 · Objects</div>
       <span class="status-badge status-proto">Prototype</span>
@@ -334,7 +457,7 @@ footer { padding:24px 60px; border-top:1px solid var(--border); display:flex; ju
         </div>
       </div>
       <div class="rd-images">
-        <div class="rd-img-main"><img src="croozinluna2.jpg" alt="crOOZin"></div>
+        <div class="rd-img-main"><img src="croozinluna.jpg" alt="crOOZin"></div>
         <div class="rd-img-sm"><img src="crOOzin-pink.jpeg" alt="crOOZin pink"></div>
         <div class="rd-img-sm"><img src="crOOzin-zoom.jpeg" alt="crOOZin detail"></div>
       </div>
@@ -497,7 +620,76 @@ footer { padding:24px 60px; border-top:1px solid var(--border); display:flex; ju
   </footer>
 </div>
 
+<!-- ── PRODUCT BANNER ── -->
+<div class="product-banner" onclick="openProduct()">
+  <div class="banner-left">
+    <div class="banner-dot"></div>
+    <div>
+      <div class="banner-name">crOOZin — Light Object</div>
+      <div class="banner-sub">Biomorphic · 3D printed · Limited series · Paris</div>
+    </div>
+  </div>
+  <div class="banner-right">
+    <span class="banner-hint">Tap to discover</span>
+    <span class="banner-price">300 €</span>
+    <span class="banner-cta">Buy now</span>
+  </div>
+</div>
+
+<!-- ── PRODUCT OVERLAY ── -->
+<div class="product-overlay" id="productOverlay">
+  <div class="product-overlay-bar">
+    <button class="product-overlay-close" onclick="closeProduct()">Back</button>
+    <span class="product-overlay-logo">Studio Incandescence · crOOZin</span>
+  </div>
+  <div class="product-body">
+
+    <div class="product-images-grid">
+      <div class="product-img-main"><img src="croozinluna.jpg" alt="crOOZin warm white"></div>
+      <div class="product-img-sm"><img src="crOOzin-pink.jpeg" alt="crOOZin pink"></div>
+      <div class="product-img-sm"><img src="crOOzin-zoom.jpeg" alt="crOOZin detail"></div>
+    </div>
+
+    <div class="product-info">
+      <div class="product-tag">Studio Incandescence · Paris · 2026</div>
+      <h2 class="product-name">crOO<em>Zin</em></h2>
+      <div class="product-tagline">Parametric light object · Limited series</div>
+
+      <p class="product-desc">A biomorphic light sculpture born from Grasshopper-driven parametric design. Inspired by Art Nouveau fluidity and Zaha Hadid's structural logic, crOOZin is printed at 25 micron resolution in translucent resin — a form that comes alive only when light passes through it.</p>
+      <p class="product-desc">Each piece is unique. Each form is a conversation between code, material, and light.</p>
+
+      <div class="product-specs">
+        <div class="product-spec-row"><span class="product-spec-key">Dimensions</span><span class="product-spec-val">Ø 15 cm × 27 cm</span></div>
+        <div class="product-spec-row"><span class="product-spec-key">Material</span><span class="product-spec-val">3D-printed resin · 25 µm resolution</span></div>
+        <div class="product-spec-row"><span class="product-spec-key">Base</span><span class="product-spec-val">Hand-turned wood</span></div>
+        <div class="product-spec-row"><span class="product-spec-key">Light</span><span class="product-spec-val">LED 2700K dimmable · Dichroic lens</span></div>
+        <div class="product-spec-row"><span class="product-spec-key">Power</span><span class="product-spec-val">USB-C</span></div>
+        <div class="product-spec-row"><span class="product-spec-key">Production</span><span class="product-spec-val">Made in Paris · Numbered series</span></div>
+      </div>
+
+      <div class="product-buy-block">
+        <div class="product-price">300 € TTC</div>
+        <div class="product-price-sub">Série limitée · Conçu & fabriqué à Paris<br>Pièce unique numérotée · Produit à la commande</div>
+        <a href="https://buy.stripe.com/14A9AU4X8fgcbdE2p0gbm01" target="_blank" class="product-buy-btn">
+          Acheter — 300 €
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 <script>
+// Product overlay
+function openProduct() {
+  const ov = document.getElementById('productOverlay');
+  ov.classList.add('open');
+  ov.scrollTop = 0;
+}
+function closeProduct() {
+  document.getElementById('productOverlay').classList.remove('open');
+}
+
 // Navigation
 function go(name) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
