@@ -153,6 +153,11 @@ nav { position:fixed; top:0; left:0; right:0; z-index:100; display:flex; justify
 .rd-img-sm { height:160px; overflow:hidden; border:1px solid var(--border); }
 .rd-img-sm img { width:100%; height:100%; object-fit:cover; filter:brightness(.75); }
 
+.rd-sheet-link { display:block; margin-bottom:48px; }
+.rd-sheet { display:block; width:100%; max-width:1200px; margin:0 auto; border:1px solid var(--border); cursor:zoom-in; transition:opacity .3s, border-color .3s; }
+.rd-sheet:hover { opacity:.88; border-color:var(--blue); }
+.rd-body.rd-body-full { grid-template-columns:1fr; max-width:800px; }
+
 /* STATUS BADGE */
 .status-badge { display:inline-block; font-family:'Space Mono',monospace; font-size:9px; letter-spacing:.2em; text-transform:uppercase; padding:4px 12px; border:1px solid; margin-bottom:24px; }
 .status-rd { color:var(--blue); border-color:var(--blue); background:var(--blue-dim); box-shadow:0 0 12px var(--blue-glow); }
@@ -432,6 +437,7 @@ footer { padding-bottom: 80px; }
     <button class="rd-tab" data-p="headset">Sensory Headset</button>
     <button class="rd-tab" data-p="fibre">LED + Fibre</button>
     <button class="rd-tab" data-p="swarm">Sea Swarm</button>
+    <button class="rd-tab" data-p="miroir">Le Miroir</button>
   </div>
 
   <!-- crOOZin PCB — TECHNICAL -->
@@ -442,6 +448,9 @@ footer { padding-bottom: 80px; }
       <h2 class="rd-title">crOOZin — <em>LED PCB</em></h2>
       <p class="rd-intro">Custom LED electronics designed for biomorphic 3D-printed light sculptures. A circuit board that disappears into the geometry — engineered for beauty as much as function.</p>
     </div>
+    <a class="rd-sheet-link" href="croozin-rd-sheet.webp" target="_blank" rel="noopener">
+      <img class="rd-sheet" src="croozin-rd-sheet.webp" alt="crOOZin — full project sheet">
+    </a>
     <div class="rd-body">
       <div>
         <p class="rd-text">The crOOZin PCB is designed to integrate seamlessly into the 3D-printed resin shell of the luminaire — a circular board that sits at the base, housing the LED driver, dimming circuit and USB-C power management in a footprint of less than 40mm diameter.</p>
@@ -483,7 +492,10 @@ footer { padding-bottom: 80px; }
       <h2 class="rd-title">Phyllotaxis — <em>Therapeutic Lamp</em></h2>
       <p class="rd-intro">A sculptural light instrument for stress regulation and wellbeing. Custom PCB integrating high-density micro-LEDs in Fibonacci spiral distribution, with biometric sensor feedback and embedded AI for adaptive light sequences.</p>
     </div>
-    <div class="rd-body">
+    <a class="rd-sheet-link" href="phyllotaxis-hero.webp" target="_blank" rel="noopener">
+      <img class="rd-sheet" src="phyllotaxis-hero.webp" alt="Phyllotaxis Lamp — wellbeing light installation">
+    </a>
+    <div class="rd-body rd-body-full">
       <div>
         <p class="rd-text">Micro-LEDs are arranged using a phyllotaxis algorithm — Fibonacci spiral distribution — across a deployable parabolic structure of laser-cut petals. Each petal acts as both structural rib and LED carrier.</p>
         <p class="rd-text">The control board integrates heart rate and breath sensors, feeding real-time biometric data to an on-device AI that modulates light sequences — spirals, pulses, waves — to guide the user toward coherence breathing and deep relaxation.</p>
@@ -496,12 +508,6 @@ footer { padding-bottom: 80px; }
           <div class="rd-spec-row"><span class="rd-spec-key">Control</span><span class="rd-spec-val">App / tablet · pre-set programs</span></div>
           <div class="rd-spec-row"><span class="rd-spec-key">Seed target</span><span class="rd-spec-val">€120,000 – €180,000</span></div>
           <div class="rd-spec-row"><span class="rd-spec-key">Status</span><span class="rd-spec-val">R&D phase · seeking partners</span></div>
-        </div>
-      </div>
-      <div class="rd-visual">
-        <div class="rd-visual-placeholder">
-          <div class="rd-visual-icon">⬡</div>
-          <div class="rd-visual-label">Phyllotaxis distribution<br>renders in development</div>
         </div>
       </div>
     </div>
@@ -573,6 +579,9 @@ footer { padding-bottom: 80px; }
       <h2 class="rd-title">Sea Swarm — <em>Autonomous Drones</em></h2>
       <p class="rd-intro">A constellation of small autonomous floating light drones — self-positioning around a vessel using swarm intelligence and phyllotaxis distribution. The ocean as a light installation.</p>
     </div>
+    <a class="rd-sheet-link" href="sea-swarm-hero.webp" target="_blank" rel="noopener">
+      <img class="rd-sheet" src="sea-swarm-hero.webp" alt="Sea Swarm — autonomous floating light drones">
+    </a>
     <div class="rd-body">
       <div>
         <p class="rd-text">Each drone unit carries a custom PCB integrating a focused LED source, underwater-rated optics, wireless communication module, GPS/IMU positioning, and a small battery. The swarm algorithm coordinates unit positions in real time, maintaining Fibonacci-inspired spatial distribution relative to the host vessel.</p>
@@ -588,6 +597,35 @@ footer { padding-bottom: 80px; }
       </div>
       <div class="rd-visual">
         <div class="rd-img-main" style="height:300px"><img src="drone-aqua.png" alt="Sea Swarm concept"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Le Miroir -->
+  <div class="rd-panel" id="rd-miroir">
+    <div class="rd-header">
+      <div class="rd-tag">Project 06 · Intimacy & Wellness</div>
+      <span class="status-badge status-concept">Concept</span>
+      <h2 class="rd-title">Le Miroir — <em>Sensory Canopy</em></h2>
+      <p class="rd-intro">A canopy of light and reflection suspended above the bed — turning an ordinary room into a space for intimacy, connection and deep rest. Where architecture, light and mirror merge into a single sensory instrument.</p>
+    </div>
+    <a class="rd-sheet-link" href="le-miroir-hero.webp" target="_blank" rel="noopener">
+      <img class="rd-sheet" src="le-miroir-hero.webp" alt="Le Miroir — intimacy & sensory experience system">
+    </a>
+    <div class="rd-body rd-body-full">
+      <div>
+        <p class="rd-text">A four-post structure in brushed metal carries a continuous warm-white LED line tracing the perimeter above the bed, its glow doubled by a mirrored ceiling panel set into the canopy — creating depth, reflection and a quiet theatrical presence in the room.</p>
+        <p class="rd-text">Light responds to presence and time of day: a library of preset scenarios moves from a soft dusk warmth for winding down to a deeper amber tone for intimacy, with gradual transitions engineered to avoid abrupt changes that disrupt mood or sleep onset.</p>
+        <p class="rd-text">Designed for boutique hotels, wellness suites and luxury residential bedrooms — a signature architectural feature a space is remembered by. Installed as a retrofit canopy, or specified directly into new-build ceiling plans.</p>
+        <div class="rd-spec">
+          <div class="rd-spec-row"><span class="rd-spec-key">Structure</span><span class="rd-spec-val">Four-post canopy · brushed metal · retrofit or built-in</span></div>
+          <div class="rd-spec-row"><span class="rd-spec-key">Light source</span><span class="rd-spec-val">Warm LED line · 1800K–2700K range</span></div>
+          <div class="rd-spec-row"><span class="rd-spec-key">Reflection</span><span class="rd-spec-val">Mirrored ceiling panel · integrated</span></div>
+          <div class="rd-spec-row"><span class="rd-spec-key">Control</span><span class="rd-spec-val">Preset scenarios · app / wall panel</span></div>
+          <div class="rd-spec-row"><span class="rd-spec-key">Sensors</span><span class="rd-spec-val">Presence · time-of-day adaptive</span></div>
+          <div class="rd-spec-row"><span class="rd-spec-key">Target market</span><span class="rd-spec-val">Boutique hotels · Wellness suites · Luxury residential</span></div>
+          <div class="rd-spec-row"><span class="rd-spec-key">Status</span><span class="rd-spec-val">Concept · vision render · seeking hospitality partners</span></div>
+        </div>
       </div>
     </div>
   </div>
