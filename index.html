@@ -61,6 +61,7 @@ nav { position:fixed; top:0; left:0; right:0; z-index:100; display:flex; justify
   background-size: 60px 60px;
   opacity: .3;
   mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 0%, transparent 100%);
+  pointer-events: none;
 }
 
 .studio-glow {
@@ -157,6 +158,11 @@ nav { position:fixed; top:0; left:0; right:0; z-index:100; display:flex; justify
 .rd-sheet { display:block; width:100%; max-width:1200px; margin:0 auto; border:1px solid var(--border); cursor:zoom-in; transition:opacity .3s, border-color .3s; }
 .rd-sheet:hover { opacity:.88; border-color:var(--blue); }
 .rd-body.rd-body-full { grid-template-columns:1fr; max-width:800px; }
+
+.rd-sheet-group { max-width:1200px; margin:0 auto 48px; display:flex; flex-direction:column; gap:32px; }
+.rd-sheet-block .rd-sheet-link { margin-bottom:0; }
+.rd-sheet-eyebrow { font-family:'Space Mono',monospace; font-size:10px; letter-spacing:.25em; text-transform:uppercase; color:var(--gray); margin-bottom:12px; display:flex; align-items:center; gap:10px; }
+.rd-sheet-eyebrow::before { content:''; width:16px; height:1px; background:var(--blue); box-shadow:0 0 6px var(--blue); }
 
 /* STATUS BADGE */
 .status-badge { display:inline-block; font-family:'Space Mono',monospace; font-size:9px; letter-spacing:.2em; text-transform:uppercase; padding:4px 12px; border:1px solid; margin-bottom:24px; }
@@ -492,8 +498,8 @@ footer { padding-bottom: 80px; }
       <h2 class="rd-title">Phyllotaxis — <em>Therapeutic Lamp</em></h2>
       <p class="rd-intro">A sculptural light instrument for stress regulation and wellbeing. Custom PCB integrating high-density micro-LEDs in Fibonacci spiral distribution, with biometric sensor feedback and embedded AI for adaptive light sequences.</p>
     </div>
-    <a class="rd-sheet-link" href="phyllotaxis-hero.webp" target="_blank" rel="noopener">
-      <img class="rd-sheet" src="phyllotaxis-hero.webp" alt="Phyllotaxis Lamp — wellbeing light installation">
+    <a class="rd-sheet-link" href="phyllotaxis-sheet.webp" target="_blank" rel="noopener">
+      <img class="rd-sheet" src="phyllotaxis-sheet.webp" alt="Phyllotaxis Lamp — wellbeing light installation, structure, specifications">
     </a>
     <div class="rd-body rd-body-full">
       <div>
@@ -521,7 +527,10 @@ footer { padding-bottom: 80px; }
       <h2 class="rd-title">Sensory — <em>Headset</em></h2>
       <p class="rd-intro">Micro-LED barrettes integrated into a wearable sensory headset — designed to create hypnotic light experiences in the peripheral and direct visual field. Light as a neurological tool.</p>
     </div>
-    <div class="rd-body">
+    <a class="rd-sheet-link" href="sensory-headset-sheet.webp" target="_blank" rel="noopener">
+      <img class="rd-sheet" src="sensory-headset-sheet.webp" alt="Micro-LED Sensory Headset — neuro-light interface, structure, specifications">
+    </a>
+    <div class="rd-body rd-body-full">
       <div>
         <p class="rd-text">A series of flexible micro-LED strips, custom-designed to conform to the interior geometry of a wearable headset. Each strip carries individually addressable LEDs at high density — capable of producing patterns, gradients and animated sequences that engage the visual cortex directly.</p>
         <p class="rd-text">The system is designed to work in conjunction with sound and breath — creating a multi-sensory environment for focus, relaxation or altered states. Control via embedded microcontroller with wireless sync.</p>
@@ -531,12 +540,6 @@ footer { padding-bottom: 80px; }
           <div class="rd-spec-row"><span class="rd-spec-key">Control</span><span class="rd-spec-val">Embedded MCU · wireless · app</span></div>
           <div class="rd-spec-row"><span class="rd-spec-key">Application</span><span class="rd-spec-val">Focus · Relaxation · Altered states</span></div>
           <div class="rd-spec-row"><span class="rd-spec-key">Status</span><span class="rd-spec-val">Concept · PCB design phase</span></div>
-        </div>
-      </div>
-      <div class="rd-visual">
-        <div class="rd-visual-placeholder">
-          <div class="rd-visual-icon">◉</div>
-          <div class="rd-visual-label">Micro-LED barrette<br>prototype in development</div>
         </div>
       </div>
     </div>
@@ -579,9 +582,26 @@ footer { padding-bottom: 80px; }
       <h2 class="rd-title">Sea Swarm — <em>Autonomous Drones</em></h2>
       <p class="rd-intro">A constellation of small autonomous floating light drones — self-positioning around a vessel using swarm intelligence and phyllotaxis distribution. The ocean as a light installation.</p>
     </div>
-    <a class="rd-sheet-link" href="sea-swarm-hero.webp" target="_blank" rel="noopener">
-      <img class="rd-sheet" src="sea-swarm-hero.webp" alt="Sea Swarm — autonomous floating light drones">
-    </a>
+    <div class="rd-sheet-group">
+      <div class="rd-sheet-block">
+        <div class="rd-sheet-eyebrow">Overview — Autonomous Marine Lighting Ecosystem</div>
+        <a class="rd-sheet-link" href="sea-swarm-overview.webp" target="_blank" rel="noopener">
+          <img class="rd-sheet" src="sea-swarm-overview.webp" alt="Sea Swarm — autonomous marine lighting ecosystem overview">
+        </a>
+      </div>
+      <div class="rd-sheet-block">
+        <div class="rd-sheet-eyebrow">Use Case — Rear Yacht Experience</div>
+        <a class="rd-sheet-link" href="sea-swarm-yacht.webp" target="_blank" rel="noopener">
+          <img class="rd-sheet" src="sea-swarm-yacht.webp" alt="Sea Swarm — rear yacht experience">
+        </a>
+      </div>
+      <div class="rd-sheet-block">
+        <div class="rd-sheet-eyebrow">Deployment — Luxury Villa Integration</div>
+        <a class="rd-sheet-link" href="sea-swarm-villa.webp" target="_blank" rel="noopener">
+          <img class="rd-sheet" src="sea-swarm-villa.webp" alt="Sea Swarm — luxury villa deployment system">
+        </a>
+      </div>
+    </div>
     <div class="rd-body">
       <div>
         <p class="rd-text">Each drone unit carries a custom PCB integrating a focused LED source, underwater-rated optics, wireless communication module, GPS/IMU positioning, and a small battery. The swarm algorithm coordinates unit positions in real time, maintaining Fibonacci-inspired spatial distribution relative to the host vessel.</p>
@@ -596,7 +616,7 @@ footer { padding-bottom: 80px; }
         </div>
       </div>
       <div class="rd-visual">
-        <div class="rd-img-main" style="height:300px"><img src="drone-aqua.png" alt="Sea Swarm concept"></div>
+        <div class="rd-img-main" style="height:300px"><img src="sea-swarm-photo.webp" alt="Sea Swarm — drones alongside yacht at dusk"></div>
       </div>
     </div>
   </div>
@@ -609,8 +629,8 @@ footer { padding-bottom: 80px; }
       <h2 class="rd-title">Le Miroir — <em>Sensory Canopy</em></h2>
       <p class="rd-intro">A canopy of light and reflection suspended above the bed — turning an ordinary room into a space for intimacy, connection and deep rest. Where architecture, light and mirror merge into a single sensory instrument.</p>
     </div>
-    <a class="rd-sheet-link" href="le-miroir-hero.webp" target="_blank" rel="noopener">
-      <img class="rd-sheet" src="le-miroir-hero.webp" alt="Le Miroir — intimacy & sensory experience system">
+    <a class="rd-sheet-link" href="le-miroir-sheet.webp" target="_blank" rel="noopener">
+      <img class="rd-sheet" src="le-miroir-sheet.webp" alt="Le Miroir — intimacy & sensory experience system, structure, specifications">
     </a>
     <div class="rd-body rd-body-full">
       <div>
