@@ -155,7 +155,7 @@ nav { position:fixed; top:0; left:0; right:0; z-index:100; display:flex; justify
 .rd-img-sm img { width:100%; height:100%; object-fit:cover; filter:brightness(.75); }
 
 .rd-sheet-link { display:block; margin-bottom:48px; }
-.rd-sheet { display:block; width:100%; max-width:1200px; margin:0 auto; border:1px solid var(--border); cursor:zoom-in; transition:opacity .3s, border-color .3s; }
+.rd-sheet { display:block; width:auto; height:auto; max-width:1200px; max-height:1200px; margin:0 auto; border:1px solid var(--border); cursor:zoom-in; transition:opacity .3s, border-color .3s; }
 .rd-sheet:hover { opacity:.88; border-color:var(--blue); }
 .rd-body.rd-body-full { grid-template-columns:1fr; max-width:800px; }
 
@@ -444,6 +444,7 @@ footer { padding-bottom: 80px; }
     <button class="rd-tab" data-p="fibre">LED + Fibre</button>
     <button class="rd-tab" data-p="swarm">Sea Swarm</button>
     <button class="rd-tab" data-p="miroir">Le Miroir</button>
+    <button class="rd-tab" data-p="immersive">Immersive Environments</button>
   </div>
 
   <!-- crOOZin PCB — TECHNICAL -->
@@ -498,9 +499,20 @@ footer { padding-bottom: 80px; }
       <h2 class="rd-title">Phyllotaxis — <em>Therapeutic Lamp</em></h2>
       <p class="rd-intro">A sculptural light instrument for stress regulation and wellbeing. Custom PCB integrating high-density micro-LEDs in Fibonacci spiral distribution, with biometric sensor feedback and embedded AI for adaptive light sequences.</p>
     </div>
-    <a class="rd-sheet-link" href="phyllotaxis-sheet.webp" target="_blank" rel="noopener">
-      <img class="rd-sheet" src="phyllotaxis-sheet.webp" alt="Phyllotaxis Lamp — wellbeing light installation, structure, specifications">
-    </a>
+    <div class="rd-sheet-group">
+      <div class="rd-sheet-block">
+        <div class="rd-sheet-eyebrow">Vision — Wellbeing Light Installation</div>
+        <a class="rd-sheet-link" href="phyllotaxis-hero.webp" target="_blank" rel="noopener">
+          <img class="rd-sheet" src="phyllotaxis-hero.webp" alt="Phyllotaxis Lamp — wellbeing light installation, vision">
+        </a>
+      </div>
+      <div class="rd-sheet-block">
+        <div class="rd-sheet-eyebrow">Structure & Specifications</div>
+        <a class="rd-sheet-link" href="phyllotaxis-sheet.webp" target="_blank" rel="noopener">
+          <img class="rd-sheet" src="phyllotaxis-sheet.webp" alt="Phyllotaxis Lamp — structure, light modes, specifications">
+        </a>
+      </div>
+    </div>
     <div class="rd-body rd-body-full">
       <div>
         <p class="rd-text">Micro-LEDs are arranged using a phyllotaxis algorithm — Fibonacci spiral distribution — across a deployable parabolic structure of laser-cut petals. Each petal acts as both structural rib and LED carrier.</p>
@@ -553,7 +565,15 @@ footer { padding-bottom: 80px; }
       <h2 class="rd-title">LED + <em>Fibre Optic</em></h2>
       <p class="rd-intro">Hybrid light bars combining LED sources with fibre optic distribution — enabling light to travel through flexible structures, around curves and into geometries impossible with conventional LED strips.</p>
     </div>
-    <div class="rd-body">
+    <div class="rd-sheet-group">
+      <div class="rd-sheet-block">
+        <div class="rd-sheet-eyebrow">Vision — Immersive Light Environments</div>
+        <a class="rd-sheet-link" href="fibre-hero.webp" target="_blank" rel="noopener">
+          <img class="rd-sheet" src="fibre-hero.webp" alt="Immersive Light Environments — large-scale fibre and LED architectural installation">
+        </a>
+      </div>
+    </div>
+    <div class="rd-body rd-body-full">
       <div>
         <p class="rd-text">Custom LED driver boards designed to couple high-intensity point sources into bundles of plastic optical fibre (POF). The fibre bundles are then integrated into 3D-printed or CNC-milled structural elements — creating light paths that follow the form rather than dictating it.</p>
         <p class="rd-text">Applications range from architectural detail lighting to sculptural installations where conventional LED placement is impossible. The hybrid approach allows colour mixing at the source while delivering pure, controllable light at the end of the fibre.</p>
@@ -563,12 +583,6 @@ footer { padding-bottom: 80px; }
           <div class="rd-spec-row"><span class="rd-spec-key">Integration</span><span class="rd-spec-val">3D-printed · CNC-milled structures</span></div>
           <div class="rd-spec-row"><span class="rd-spec-key">Control</span><span class="rd-spec-val">DMX · ArtNet compatible driver</span></div>
           <div class="rd-spec-row"><span class="rd-spec-key">Status</span><span class="rd-spec-val">Prototype testing · active R&D</span></div>
-        </div>
-      </div>
-      <div class="rd-visual">
-        <div class="rd-visual-placeholder">
-          <div class="rd-visual-icon">◈</div>
-          <div class="rd-visual-label">Hybrid fibre-LED prototype<br>images coming soon</div>
         </div>
       </div>
     </div>
@@ -583,6 +597,12 @@ footer { padding-bottom: 80px; }
       <p class="rd-intro">A constellation of small autonomous floating light drones — self-positioning around a vessel using swarm intelligence and phyllotaxis distribution. The ocean as a light installation.</p>
     </div>
     <div class="rd-sheet-group">
+      <div class="rd-sheet-block">
+        <div class="rd-sheet-eyebrow">Vision — Light. Motion. Harmony.</div>
+        <a class="rd-sheet-link" href="sea-swarm-hero.webp" target="_blank" rel="noopener">
+          <img class="rd-sheet" src="sea-swarm-hero.webp" alt="Sea Swarm — light, motion, harmony, vision">
+        </a>
+      </div>
       <div class="rd-sheet-block">
         <div class="rd-sheet-eyebrow">Overview — Autonomous Marine Lighting Ecosystem</div>
         <a class="rd-sheet-link" href="sea-swarm-overview.webp" target="_blank" rel="noopener">
@@ -629,9 +649,20 @@ footer { padding-bottom: 80px; }
       <h2 class="rd-title">Le Miroir — <em>Sensory Canopy</em></h2>
       <p class="rd-intro">A canopy of light and reflection suspended above the bed — turning an ordinary room into a space for intimacy, connection and deep rest. Where architecture, light and mirror merge into a single sensory instrument.</p>
     </div>
-    <a class="rd-sheet-link" href="le-miroir-sheet.webp" target="_blank" rel="noopener">
-      <img class="rd-sheet" src="le-miroir-sheet.webp" alt="Le Miroir — intimacy & sensory experience system, structure, specifications">
-    </a>
+    <div class="rd-sheet-group">
+      <div class="rd-sheet-block">
+        <div class="rd-sheet-eyebrow">Vision — Intimacy & Sensory Experience System</div>
+        <a class="rd-sheet-link" href="le-miroir-hero.webp" target="_blank" rel="noopener">
+          <img class="rd-sheet" src="le-miroir-hero.webp" alt="Le Miroir — intimacy & sensory experience system, vision">
+        </a>
+      </div>
+      <div class="rd-sheet-block">
+        <div class="rd-sheet-eyebrow">Structure & Specifications</div>
+        <a class="rd-sheet-link" href="le-miroir-sheet.webp" target="_blank" rel="noopener">
+          <img class="rd-sheet" src="le-miroir-sheet.webp" alt="Le Miroir — structure, technical views, specifications">
+        </a>
+      </div>
+    </div>
     <div class="rd-body rd-body-full">
       <div>
         <p class="rd-text">A four-post structure in brushed metal carries a continuous warm-white LED line tracing the perimeter above the bed, its glow doubled by a mirrored ceiling panel set into the canopy — creating depth, reflection and a quiet theatrical presence in the room.</p>
@@ -645,6 +676,48 @@ footer { padding-bottom: 80px; }
           <div class="rd-spec-row"><span class="rd-spec-key">Sensors</span><span class="rd-spec-val">Presence · time-of-day adaptive</span></div>
           <div class="rd-spec-row"><span class="rd-spec-key">Target market</span><span class="rd-spec-val">Boutique hotels · Wellness suites · Luxury residential</span></div>
           <div class="rd-spec-row"><span class="rd-spec-key">Status</span><span class="rd-spec-val">Concept · vision render · seeking hospitality partners</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Immersive Environments -->
+  <div class="rd-panel" id="rd-immersive">
+    <div class="rd-header">
+      <div class="rd-tag">Project 07 · Immersive Installations</div>
+      <span class="status-badge status-concept">Concept</span>
+      <h2 class="rd-title">Immersive — <em>Light Environments</em></h2>
+      <p class="rd-intro">We design and build immersive light sculptures that merge technology and emotion. Each structure is an instrument — blending light, sound and space to create collective experiences that inspire, focus and transform.</p>
+    </div>
+    <div class="rd-sheet-group">
+      <div class="rd-sheet-block">
+        <div class="rd-sheet-eyebrow">Vision — We Shape Light. You Feel Its Power.</div>
+        <a class="rd-sheet-link" href="immersive-hero.webp" target="_blank" rel="noopener">
+          <img class="rd-sheet" src="immersive-hero.webp" alt="Immersive Light Environments — large-scale light sculpture, group experience">
+        </a>
+      </div>
+      <div class="rd-sheet-block">
+        <div class="rd-sheet-eyebrow">Technical Detail — The Light Barrette Module</div>
+        <a class="rd-sheet-link" href="immersive-barrette-detail.webp" target="_blank" rel="noopener">
+          <img class="rd-sheet" src="immersive-barrette-detail.webp" alt="Light Barrette Module — technical detail, specifications, structural integration">
+        </a>
+      </div>
+    </div>
+    <div class="rd-body rd-body-full">
+      <div>
+        <p class="rd-text">The fundamental building block is the light barrette — a CNC-machined aluminium body carrying a row of high-intensity LEDs, each feeding light up through a high-transmission PMMA acrylic rod. Rod lengths vary along each barrette to build volumetric wave patterns as they are mounted along curved structural rings.</p>
+        <p class="rd-text">Barrettes connect edge to edge via a mechanical + electrical modular connector, with power and DMX/ArtNet data daisy-chained through quick-disconnect cabling — the same module scales from a single row to a full architectural dome.</p>
+        <p class="rd-text">Barrette position, rod height, pattern density and light distribution are generated parametrically (Grasshopper + Rhino), allowing rapid iteration and site-specific adaptation for each installation.</p>
+        <div class="rd-spec">
+          <div class="rd-spec-row"><span class="rd-spec-key">LED type</span><span class="rd-spec-val">High-intensity LED · RGB or tunable white</span></div>
+          <div class="rd-spec-row"><span class="rd-spec-key">Light guide</span><span class="rd-spec-val">PMMA acrylic rod · Ø 5mm · 20–700mm variable</span></div>
+          <div class="rd-spec-row"><span class="rd-spec-key">Body</span><span class="rd-spec-val">Aluminium 6061 · CNC-machined</span></div>
+          <div class="rd-spec-row"><span class="rd-spec-key">Control</span><span class="rd-spec-val">DMX / ArtNet compatible</span></div>
+          <div class="rd-spec-row"><span class="rd-spec-key">Power</span><span class="rd-spec-val">24V DC</span></div>
+          <div class="rd-spec-row"><span class="rd-spec-key">Protection</span><span class="rd-spec-val">IP20 · indoor use</span></div>
+          <div class="rd-spec-row"><span class="rd-spec-key">Design system</span><span class="rd-spec-val">Parametric · Grasshopper + Rhino</span></div>
+          <div class="rd-spec-row"><span class="rd-spec-key">Scale</span><span class="rd-spec-val">Intimate installations to large-scale environments</span></div>
+          <div class="rd-spec-row"><span class="rd-spec-key">Status</span><span class="rd-spec-val">Concept · vision render · seeking venue & event partners</span></div>
         </div>
       </div>
     </div>
