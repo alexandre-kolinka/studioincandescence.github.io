@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Studio Incandescence — LED R&D</title>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Space+Grotesk:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
 :root {
   --black: #050508;
@@ -44,8 +44,8 @@ nav { position:fixed; top:0; left:0; right:0; z-index:100; display:flex; justify
   min-height: calc(100vh - 56px);
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 80px 60px;
+  justify-content: flex-start;
+  padding: 48px 60px 80px;
   position: relative;
   overflow: hidden;
 }
@@ -71,6 +71,16 @@ nav { position:fixed; top:0; left:0; right:0; z-index:100; display:flex; justify
   top: 50%; left: 50%;
   transform: translate(-50%, -50%);
   pointer-events: none;
+}
+
+.hero-sil { font-family:'Big Shoulders Display',sans-serif; font-weight:800; font-size:clamp(90px,14vw,220px); line-height:.78; letter-spacing:.01em; color:var(--blue); text-shadow:0 0 40px var(--blue-glow), 0 0 90px rgba(0,102,255,.35), 0 0 160px rgba(0,102,255,.15); margin-bottom:12px; animation:sil-ignite 1.6s ease-out; }
+
+@keyframes sil-ignite {
+  0%   { opacity:0;   filter:brightness(2.5) blur(3px); }
+  10%  { opacity:1;   filter:brightness(3) blur(0); }
+  16%  { opacity:.3;  filter:brightness(1); }
+  24%  { opacity:1; }
+  100% { opacity:1;   filter:brightness(1); }
 }
 
 .hero-tag { font-family:'Space Mono',monospace; font-size:11px; letter-spacing:.3em; text-transform:uppercase; color:var(--blue); margin-bottom:32px; display:flex; align-items:center; gap:12px; }
@@ -348,6 +358,7 @@ footer { padding-bottom: 80px; }
 <div class="page active" id="page-studio">
   <div class="studio-hero">
     <div class="studio-glow"></div>
+    <div class="hero-sil">SIL</div>
     <div class="hero-tag">Paris · R&D Studio · Est. 2026</div>
     <h1 class="hero-title">Electronics as<br><strong>creative material</strong></h1>
     <p class="hero-sub">Studio Incandescence develops custom LED hardware, sensor integration and embedded intelligence for light objects, therapeutic devices and sensory installations. Where circuit design meets light design.</p>
