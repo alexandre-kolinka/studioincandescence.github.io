@@ -173,6 +173,7 @@ nav { position:fixed; top:0; left:0; right:0; z-index:100; display:flex; justify
 .rd-img-sm img { width:100%; height:100%; object-fit:cover; filter:brightness(.75); }
 
 .rd-sheet-link { display:block; max-width:1200px; margin:0 auto 48px; }
+.rd-sheet-link picture { display:block; }
 .rd-sheet { display:block; width:auto; height:auto; max-width:100%; max-height:1200px; margin:0 auto; border:1px solid var(--border); cursor:zoom-in; transition:opacity .3s, border-color .3s; }
 .rd-sheet:hover { opacity:.88; border-color:var(--blue); }
 .rd-body.rd-body-full { grid-template-columns:1fr; max-width:800px; }
@@ -474,7 +475,9 @@ footer { padding-bottom: 80px; }
       <p class="rd-intro">Custom LED electronics designed for biomorphic 3D-printed light sculptures. A circuit board that disappears into the geometry — engineered for beauty as much as function.</p>
     </div>
     <a class="rd-sheet-link" href="croozin-rd-sheet.webp" target="_blank" rel="noopener">
-      <img loading="lazy" class="rd-sheet" src="croozin-rd-sheet.webp" alt="crOOZin — full project sheet">
+      <picture>
+        <img loading="lazy" class="rd-sheet" src="croozin-rd-sheet.webp" alt="crOOZin — full project sheet">
+      </picture>
     </a>
     <div class="rd-body">
       <div>
@@ -521,13 +524,17 @@ footer { padding-bottom: 80px; }
       <div class="rd-sheet-block">
         <div class="rd-sheet-eyebrow">Vision — Wellbeing Light Installation</div>
         <a class="rd-sheet-link" href="phyllotaxis-hero.webp" target="_blank" rel="noopener">
-          <img loading="lazy" class="rd-sheet" src="phyllotaxis-hero.webp" alt="Phyllotaxis Lamp — wellbeing light installation, vision">
+          <picture>
+            <img loading="lazy" class="rd-sheet" src="phyllotaxis-hero.webp" alt="Phyllotaxis Lamp — wellbeing light installation, vision">
+          </picture>
         </a>
       </div>
       <div class="rd-sheet-block">
         <div class="rd-sheet-eyebrow">Structure & Specifications</div>
         <a class="rd-sheet-link" href="phyllotaxis-sheet.webp" target="_blank" rel="noopener">
-          <img loading="lazy" class="rd-sheet" src="phyllotaxis-sheet.webp" alt="Phyllotaxis Lamp — structure, light modes, specifications">
+          <picture>
+            <img loading="lazy" class="rd-sheet" src="phyllotaxis-sheet.webp" alt="Phyllotaxis Lamp — structure, light modes, specifications">
+          </picture>
         </a>
       </div>
     </div>
@@ -558,7 +565,9 @@ footer { padding-bottom: 80px; }
       <p class="rd-intro">Micro-LED barrettes integrated into a wearable sensory headset — designed to create hypnotic light experiences in the peripheral and direct visual field. Light as a neurological tool.</p>
     </div>
     <a class="rd-sheet-link" href="sensory-headset-sheet.webp" target="_blank" rel="noopener">
-      <img loading="lazy" class="rd-sheet" src="sensory-headset-sheet.webp" alt="Micro-LED Sensory Headset — neuro-light interface, structure, specifications">
+      <picture>
+        <img loading="lazy" class="rd-sheet" src="sensory-headset-sheet.webp" alt="Micro-LED Sensory Headset — neuro-light interface, structure, specifications">
+      </picture>
     </a>
     <div class="rd-body rd-body-full">
       <div>
@@ -616,25 +625,33 @@ footer { padding-bottom: 80px; }
       <div class="rd-sheet-block">
         <div class="rd-sheet-eyebrow">Vision — Light. Motion. Harmony.</div>
         <a class="rd-sheet-link" href="sea-swarm-hero.webp" target="_blank" rel="noopener">
-          <img loading="lazy" class="rd-sheet" src="sea-swarm-hero.webp" alt="Sea Swarm — light, motion, harmony, vision">
+          <picture>
+            <img loading="lazy" class="rd-sheet" src="sea-swarm-hero.webp" alt="Sea Swarm — light, motion, harmony, vision">
+          </picture>
         </a>
       </div>
       <div class="rd-sheet-block">
         <div class="rd-sheet-eyebrow">Overview — Autonomous Marine Lighting Ecosystem</div>
         <a class="rd-sheet-link" href="sea-swarm-overview.webp" target="_blank" rel="noopener">
-          <img loading="lazy" class="rd-sheet" src="sea-swarm-overview.webp" alt="Sea Swarm — autonomous marine lighting ecosystem overview">
+          <picture>
+            <img loading="lazy" class="rd-sheet" src="sea-swarm-overview.webp" alt="Sea Swarm — autonomous marine lighting ecosystem overview">
+          </picture>
         </a>
       </div>
       <div class="rd-sheet-block">
         <div class="rd-sheet-eyebrow">Use Case — Rear Yacht Experience</div>
         <a class="rd-sheet-link" href="sea-swarm-yacht.webp" target="_blank" rel="noopener">
-          <img loading="lazy" class="rd-sheet" src="sea-swarm-yacht.webp" alt="Sea Swarm — rear yacht experience">
+          <picture>
+            <img loading="lazy" class="rd-sheet" src="sea-swarm-yacht.webp" alt="Sea Swarm — rear yacht experience">
+          </picture>
         </a>
       </div>
       <div class="rd-sheet-block">
         <div class="rd-sheet-eyebrow">Deployment — Luxury Villa Integration</div>
         <a class="rd-sheet-link" href="sea-swarm-villa.webp" target="_blank" rel="noopener">
-          <img loading="lazy" class="rd-sheet" src="sea-swarm-villa.webp" alt="Sea Swarm — luxury villa deployment system">
+          <picture>
+            <img loading="lazy" class="rd-sheet" src="sea-swarm-villa.webp" alt="Sea Swarm — luxury villa deployment system">
+          </picture>
         </a>
       </div>
     </div>
@@ -668,14 +685,19 @@ footer { padding-bottom: 80px; }
     <div class="rd-sheet-group">
       <div class="rd-sheet-block">
         <div class="rd-sheet-eyebrow">Vision — Intimacy & Sensory Experience System</div>
-        <a class="rd-sheet-link" href="le-miroir-hero.webp" target="_blank" rel="noopener">
-          <img loading="lazy" class="rd-sheet" src="le-miroir-hero.webp" alt="Le Miroir — intimacy & sensory experience system, vision">
+        <a class="rd-sheet-link" href="le-miroir-hero-horizontal.webp" target="_blank" rel="noopener">
+          <picture>
+            <source media="(max-width:700px)" srcset="le-miroir-hero-vertical.webp">
+            <img loading="lazy" class="rd-sheet" src="le-miroir-hero-horizontal.webp" alt="Le Miroir — intimacy & sensory experience system, vision">
+          </picture>
         </a>
       </div>
       <div class="rd-sheet-block">
         <div class="rd-sheet-eyebrow">Structure & Specifications</div>
         <a class="rd-sheet-link" href="le-miroir-sheet.webp" target="_blank" rel="noopener">
-          <img loading="lazy" class="rd-sheet" src="le-miroir-sheet.webp" alt="Le Miroir — structure, technical views, specifications">
+          <picture>
+            <img loading="lazy" class="rd-sheet" src="le-miroir-sheet.webp" alt="Le Miroir — structure, technical views, specifications">
+          </picture>
         </a>
       </div>
     </div>
@@ -708,14 +730,19 @@ footer { padding-bottom: 80px; }
     <div class="rd-sheet-group">
       <div class="rd-sheet-block">
         <div class="rd-sheet-eyebrow">Vision — We Shape Light. You Feel Its Power.</div>
-        <a class="rd-sheet-link" href="immersive-hero.webp" target="_blank" rel="noopener">
-          <img loading="lazy" class="rd-sheet" src="immersive-hero.webp" alt="Immersive Light Environments — large-scale light sculpture, group experience">
+        <a class="rd-sheet-link" href="immersive-hero-horizontal.webp" target="_blank" rel="noopener">
+          <picture>
+            <source media="(max-width:700px)" srcset="immersive-hero-vertical.webp">
+            <img loading="lazy" class="rd-sheet" src="immersive-hero-horizontal.webp" alt="Immersive Light Environments — large-scale light sculpture, group experience">
+          </picture>
         </a>
       </div>
       <div class="rd-sheet-block">
         <div class="rd-sheet-eyebrow">Technical Detail — The Light Barrette Module</div>
         <a class="rd-sheet-link" href="immersive-barrette-detail.webp" target="_blank" rel="noopener">
-          <img loading="lazy" class="rd-sheet" src="immersive-barrette-detail.webp" alt="Light Barrette Module — technical detail, specifications, structural integration">
+          <picture>
+            <img loading="lazy" class="rd-sheet" src="immersive-barrette-detail.webp" alt="Light Barrette Module — technical detail, specifications, structural integration">
+          </picture>
         </a>
       </div>
     </div>
