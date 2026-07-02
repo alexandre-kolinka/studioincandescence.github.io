@@ -111,10 +111,56 @@ nav { position:fixed; top:0; left:0; right:0; z-index:100; display:flex; justify
 .hero-sub { font-size:16px; line-height:1.8; color:var(--gray-light); max-width:600px; margin-bottom:60px; }
 
 .hero-cta { display:flex; gap:20px; flex-wrap:wrap; }
-.btn-primary { font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--black); background:var(--blue); padding:14px 32px; cursor:pointer; border:none; font-family:'Space Grotesk',sans-serif; transition:all .3s; box-shadow:0 0 24px var(--blue-glow); }
+.btn-primary { display:inline-block; font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--black); background:var(--blue); padding:14px 32px; cursor:pointer; border:none; font-family:'Space Grotesk',sans-serif; transition:all .3s; box-shadow:0 0 24px var(--blue-glow); text-decoration:none; }
 .btn-primary:hover { box-shadow:0 0 40px var(--blue-glow), 0 0 80px rgba(0,102,255,.2); transform:translateY(-1px); }
-.btn-secondary { font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--blue); background:none; padding:14px 32px; cursor:pointer; border:1px solid var(--blue); font-family:'Space Grotesk',sans-serif; transition:all .3s; }
+.btn-secondary { display:inline-block; font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--blue); background:none; padding:14px 32px; cursor:pointer; border:1px solid var(--blue); font-family:'Space Grotesk',sans-serif; transition:all .3s; text-decoration:none; }
 .btn-secondary:hover { background:var(--blue-dim); }
+
+/* Partner CTA (used inside R&D panels) */
+.rd-partner-cta { margin-bottom:48px; }
+
+/* Collaborate page — section system */
+.collab-section { border-top:1px solid var(--border); padding-top:56px; margin-bottom:80px; }
+.section-eyebrow { font-family:'Space Mono',monospace; font-size:10px; letter-spacing:.25em; text-transform:uppercase; color:var(--blue); margin-bottom:16px; display:flex; align-items:center; gap:10px; }
+.section-eyebrow::before { content:''; width:16px; height:1px; background:var(--blue); box-shadow:0 0 6px var(--blue); }
+.section-title { font-size:clamp(26px,3.2vw,40px); font-weight:300; color:var(--white); margin-bottom:20px; }
+.section-title em { font-style:normal; color:var(--blue); }
+.section-text { font-size:15px; line-height:1.8; color:var(--gray-light); max-width:640px; margin-bottom:40px; }
+
+.process-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--border); margin-bottom:40px; }
+.process-card { background:var(--black); padding:28px 24px; transition:background .3s; }
+.process-card:hover { background:var(--blue-dim); }
+.process-num { font-family:'Space Mono',monospace; font-size:20px; color:rgba(0,102,255,.35); margin-bottom:12px; }
+.process-title { font-size:12px; font-weight:500; letter-spacing:.1em; text-transform:uppercase; color:var(--white); margin-bottom:8px; }
+.process-text { font-size:12px; line-height:1.6; color:var(--gray); }
+
+.values-strip { display:flex; flex-wrap:wrap; gap:40px; margin-bottom:80px; padding-bottom:0; }
+.value-item { flex:1; min-width:180px; }
+.value-title { font-size:11px; font-weight:500; letter-spacing:.12em; text-transform:uppercase; color:var(--blue); margin-bottom:8px; }
+.value-text { font-size:12px; line-height:1.6; color:var(--gray); }
+.values-tagline { font-family:'Space Mono',monospace; font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--gray); text-align:center; padding:24px 0; border-top:1px solid var(--border); }
+
+.roadmap-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--border); margin-bottom:40px; }
+.roadmap-card { background:var(--black); padding:28px 22px; }
+.roadmap-card.is-current { background:var(--blue-dim); }
+.roadmap-num { font-family:'Space Mono',monospace; font-size:18px; color:rgba(0,102,255,.35); margin-bottom:16px; }
+.roadmap-title { font-size:12px; font-weight:500; letter-spacing:.1em; text-transform:uppercase; color:var(--white); margin-bottom:14px; }
+.roadmap-amount { font-family:'Space Grotesk',sans-serif; font-size:20px; color:var(--blue); margin-bottom:4px; }
+.roadmap-time { font-size:11px; color:var(--gray); }
+
+.unlocks-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px 40px; margin-bottom:40px; }
+.unlock-item { display:flex; gap:14px; align-items:flex-start; font-size:13px; line-height:1.6; color:var(--gray-light); }
+.unlock-item::before { content:'—'; color:var(--blue); flex-shrink:0; }
+
+.team-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--border); margin-bottom:32px; }
+.team-card { background:var(--black); padding:28px 24px; }
+.team-name { font-size:14px; font-weight:500; color:var(--white); margin-bottom:4px; }
+.team-role { font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:var(--blue); margin-bottom:12px; }
+.team-bio { font-size:12px; line-height:1.6; color:var(--gray); }
+.collab-advisory { font-size:12px; color:var(--gray); margin-bottom:40px; }
+.collab-advisory strong { color:var(--gray-light); font-weight:500; }
+
+.collab-legal { font-size:10px; color:var(--gray); opacity:.6; letter-spacing:.02em; margin-top:8px; }
 
 /* ABOUT STRIP */
 .about-strip { padding:80px 60px; border-top:1px solid var(--border); display:grid; grid-template-columns:1fr 1fr; gap:80px; }
@@ -190,7 +236,7 @@ nav { position:fixed; top:0; left:0; right:0; z-index:100; display:flex; justify
 .status-concept { color:#ff9900; border-color:#ff9900; background:rgba(255,153,0,.08); }
 
 /* ══ COLLABORATE PAGE ══ */
-.collab-page { min-height:calc(100vh - 56px); display:flex; flex-direction:column; justify-content:center; padding:80px 60px; }
+.collab-page { min-height:calc(100vh - 56px); display:flex; flex-direction:column; justify-content:flex-start; padding:64px 60px 40px; }
 .collab-title { font-size:clamp(36px,5vw,72px); font-weight:300; color:var(--white); line-height:1.05; margin-bottom:24px; }
 .collab-title em { font-style:normal; color:var(--blue); text-shadow:0 0 40px var(--blue-glow); }
 .collab-sub { font-size:16px; line-height:1.8; color:var(--gray-light); max-width:560px; margin-bottom:60px; }
@@ -347,6 +393,11 @@ footer { padding-bottom: 80px; }
   .stats-row{grid-template-columns:1fr 1fr}
   .rd-body{grid-template-columns:1fr;gap:40px}
   .collab-grid{grid-template-columns:1fr}
+  .process-grid{grid-template-columns:1fr}
+  .roadmap-grid{grid-template-columns:1fr 1fr}
+  .team-grid{grid-template-columns:1fr}
+  .unlocks-grid{grid-template-columns:1fr}
+  .values-strip{gap:24px}
   .studio-hero{padding:60px 32px}
   .about-strip{padding:60px 32px}
   .rd-panel{padding:40px 32px}
@@ -363,6 +414,7 @@ footer { padding-bottom: 80px; }
   .rd-panel{padding:28px 16px}
   .collab-page{padding:48px 20px}
   .collab-grid{grid-template-columns:1fr}
+  .roadmap-grid{grid-template-columns:1fr}
   .collab-contact{gap:20px;flex-direction:column;align-items:flex-start}
   footer{padding:18px 20px;flex-direction:column;gap:8px;text-align:center}
 }
@@ -564,6 +616,10 @@ footer { padding-bottom: 80px; }
       <h2 class="rd-title">Sensory — <em>Headset</em></h2>
       <p class="rd-intro">Micro-LED barrettes integrated into a wearable sensory headset — designed to create hypnotic light experiences in the peripheral and direct visual field. Light as a neurological tool.</p>
     </div>
+    <div class="rd-partner-cta">
+      <div class="section-eyebrow">Thinking Partner</div>
+      <a class="btn-primary" href="https://www.lesmeditationselectroniques.com/" target="_blank" rel="noopener">Explore with Alexandrine Comte ↗</a>
+    </div>
     <a class="rd-sheet-link" href="sensory-headset-sheet.webp" target="_blank" rel="noopener">
       <picture>
         <img loading="lazy" class="rd-sheet" src="sensory-headset-sheet.webp" alt="Micro-LED Sensory Headset — neuro-light interface, structure, specifications">
@@ -727,6 +783,10 @@ footer { padding-bottom: 80px; }
       <h2 class="rd-title">Immersive — <em>Light Environments</em></h2>
       <p class="rd-intro">We design and build immersive light sculptures that merge technology and emotion. Each structure is an instrument — blending light, sound and space to create collective experiences that inspire, focus and transform.</p>
     </div>
+    <div class="rd-partner-cta">
+      <div class="section-eyebrow">Thinking Partner</div>
+      <a class="btn-primary" href="https://www.lesmeditationselectroniques.com/" target="_blank" rel="noopener">Explore with Alexandrine Comte ↗</a>
+    </div>
     <div class="rd-sheet-group">
       <div class="rd-sheet-block">
         <div class="rd-sheet-eyebrow">Vision — We Shape Light. You Feel Its Power.</div>
@@ -793,12 +853,98 @@ footer { padding-bottom: 80px; }
       </div>
     </div>
 
+    <div class="collab-section">
+      <div class="section-eyebrow">SIL Ecosystem</div>
+      <h3 class="section-title">How we <em>work</em></h3>
+      <p class="section-text">An integrated ecosystem that nurtures ideas, drives innovation and delivers meaningful experiences — from first concept to installations that connect people, places and emotions.</p>
+      <div class="process-grid">
+        <div class="process-card"><div class="process-num">01</div><div class="process-title">Ideate</div><div class="process-text">Research, inspiration and concept development.</div></div>
+        <div class="process-card"><div class="process-num">02</div><div class="process-title">Design</div><div class="process-text">Creative direction, visualization and technical design.</div></div>
+        <div class="process-card"><div class="process-num">03</div><div class="process-title">Engineer</div><div class="process-text">Prototyping, simulation and technical engineering.</div></div>
+        <div class="process-card"><div class="process-num">04</div><div class="process-title">Produce</div><div class="process-text">Material selection, fabrication and quality control.</div></div>
+        <div class="process-card"><div class="process-num">05</div><div class="process-title">Deploy</div><div class="process-text">Installation, integration and on-site execution.</div></div>
+        <div class="process-card"><div class="process-num">06</div><div class="process-title">Experience</div><div class="process-text">Activation, maintenance and long-term support.</div></div>
+      </div>
+      <div class="values-strip">
+        <div class="value-item"><div class="value-title">Collaborative</div><div class="value-text">Working closely with our partners and clients.</div></div>
+        <div class="value-item"><div class="value-title">Sustainable</div><div class="value-text">Designing with respect for people and planet.</div></div>
+        <div class="value-item"><div class="value-title">Innovative</div><div class="value-text">Pioneering solutions through technology and creativity.</div></div>
+        <div class="value-item"><div class="value-title">Impactful</div><div class="value-text">Creating lasting emotional and cultural impact.</div></div>
+      </div>
+      <div class="values-tagline">One ecosystem. Endless possibilities.</div>
+    </div>
+
+    <div class="collab-section">
+      <div class="section-eyebrow">Love Money — First Round</div>
+      <h3 class="section-title">Backing <em>Studio Incandescence</em></h3>
+      <p class="section-text">We're raising €100,000 over the next six weeks — a first round built on trust, ahead of institutional investment, to carry our prototypes through to their first paying deployments.</p>
+
+      <div class="roadmap-grid">
+        <div class="roadmap-card is-current">
+          <div class="roadmap-num">01</div>
+          <div class="roadmap-title">Love Money</div>
+          <div class="roadmap-amount">€100K</div>
+          <div class="roadmap-time">6 weeks</div>
+        </div>
+        <div class="roadmap-card">
+          <div class="roadmap-num">02</div>
+          <div class="roadmap-title">BPI Innovation</div>
+          <div class="roadmap-amount">+€100–200K</div>
+          <div class="roadmap-time">6–12 months</div>
+        </div>
+        <div class="roadmap-card">
+          <div class="roadmap-num">03</div>
+          <div class="roadmap-title">Seed</div>
+          <div class="roadmap-amount">€300K–1M</div>
+          <div class="roadmap-time">12–24 months</div>
+        </div>
+        <div class="roadmap-card">
+          <div class="roadmap-num">04</div>
+          <div class="roadmap-title">Scale-up · Series A</div>
+          <div class="roadmap-amount">€3M+</div>
+          <div class="roadmap-time">24–36 months</div>
+        </div>
+      </div>
+
+      <p class="section-text" style="margin-bottom:20px;font-size:13px;letter-spacing:.05em;text-transform:uppercase;color:var(--gray)">What €100K unlocks</p>
+      <div class="unlocks-grid">
+        <div class="unlock-item">Completion of Le Miroir and Phyllotaxis Lamp v1 prototypes.</div>
+        <div class="unlock-item">Filing of IP protections (patents, designs, trademarks).</div>
+        <div class="unlock-item">Industrialization of the crOOZin module (PCB v1 + embedded firmware).</div>
+        <div class="unlock-item">Complete dossier submitted to BPI France to activate Stage 2.</div>
+        <div class="unlock-item">First hotel pilot signed (Le Miroir validation).</div>
+        <div class="unlock-item">Setup of legal team (IP lawyer, accountant, shareholders' agreement notarized).</div>
+      </div>
+
+      <p class="section-text" style="margin-bottom:20px;font-size:13px;letter-spacing:.05em;text-transform:uppercase;color:var(--gray)">Founding team</p>
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="team-name">Alexandre Kolinka</div>
+          <div class="team-role">Founder · Managing Director</div>
+          <div class="team-bio">Lighting designer and creative director with 25+ years of international experience.</div>
+        </div>
+        <div class="team-card">
+          <div class="team-name">Antoine Doussaud</div>
+          <div class="team-role">Co-founder · Technical Director</div>
+          <div class="team-bio">Embedded systems engineer specialized in IoT, electronics and product development.</div>
+        </div>
+        <div class="team-card">
+          <div class="team-name">Maryna Synytsya</div>
+          <div class="team-role">Co-founder · Business Development</div>
+          <div class="team-bio">International business developer specialized in fundraising and strategic partnerships.</div>
+        </div>
+      </div>
+      <p class="collab-advisory">Financial advisory: <strong>Optimal Gestion</strong> — Fabrice Abtan, Chartered Accountant. For the full investor briefing, reach out directly below.</p>
+    </div>
+
     <div class="collab-contact">
       <a href="mailto:lightsonic@gmail.com" class="collab-email">lightsonic@gmail.com</a>
       <div class="c-sep" style="width:4px;height:4px;border-radius:50%;background:var(--blue);opacity:.4;"></div>
+      <a href="mailto:lea.kallo@gmail.com" class="collab-link">Investor Relations</a>
       <a href="https://alexandre-kolinka.github.io" class="collab-link" target="_blank">↗ Portfolio</a>
       <a href="https://instagram.com/croozin_lamp" class="collab-link" target="_blank">↗ crOOZin</a>
     </div>
+    <p class="collab-legal">Studio Incandescence · SAS — SIREN 992 098 731 · RCS Paris 06/10/2025 — 212 rue du Faubourg Saint-Martin, 75010 Paris</p>
   </div>
 
   <footer>
